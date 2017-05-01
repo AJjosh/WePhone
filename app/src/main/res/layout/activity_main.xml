@@ -1,13 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="tools.unrealbot.aj.wephone.MainActivity">
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="tools.unrealbot.aj.wephone.MainActivity"
+    android:background="@android:color/background_dark">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/avaya"
+                android:id="@+id/imageView"
+                android:paddingTop="10dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/background_light"
+                    android:elevation="4dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:text="Server Hostname"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/hostname"
+                        android:layout_weight="1"
+                        android:hint="Hostname or IP" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/background_light"
+                    android:elevation="4dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:text="Your Station"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView2"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:ems="10"
+                        android:id="@+id/extNo"
+                        android:layout_weight="1"
+                        android:hint="Station Number" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/background_light"
+                    android:elevation="4dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:text="Password"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView3"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/password"
+                        android:layout_weight="1"
+                        android:hint="Enter Pasword" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/background_light"
+                    android:elevation="4dp"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:text="Domain Name"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView4"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/domain"
+                        android:layout_weight="1"
+                        android:hint="Enter Domain" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/background_light"
+                    android:elevation="4dp"
+                    android:paddingTop="8dp">
+
+                    <Switch
+                        android:text="USE TLS?"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tlsSwitch"
+                        android:layout_weight="1"
+                        android:textStyle="normal|italic" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center_horizontal">
+
+            <Button
+                android:text="LOGIN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/login" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
